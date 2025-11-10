@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+:root {
+  --blue1: #77b9f0;
+  --blue2: #2c8fe0;
+  --blue3: #0d6fbf;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: white;
+  overflow-x: hidden;
+  min-width: 900px;
+  color: #222;
+}
+
+/* PAGE WRAPPER */
+.page {
+  position: relative;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* HOME SECTION */
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 70px 80px 40px;
+  background: white;
+}
+
+.home-container {
+  text-align: left;
+  max-width: 700px;
+  margin-bottom: 40px;
+}
+
+.welcome {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--blue2);
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.archive {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--blue3);
+  line-height: 1.05;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--blue2);
+}
+
+/* CAROUSEL */
+#home .carousel-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0;
+  text-align: center;
+}
+
+#home .carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+#home .carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+#home .club-card {
+  min-width: 100%;
+  padding: 40px;
+  background: #f8f9fa;
+}
+
+#home .club-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 100%;
+  margin-bottom: 15px;
+}
+
+#home .club-card h4 {
+  color: #000;
+  margin: 10px 0;
+}
+
+#home .club-card p {
+  color: #555;
+}
+
+#home .carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--blue2);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#home .carousel-btn:hover {
+  background: var(--blue3);
+}
+
+#home .prev { left: 15px; }
+#home .next { right: 15px; }
+
+@media (min-width: 768px) {
+  #home .club-card { min-width: 50%; }
+}
+
+@media (min-width: 1024px) {
+  #home .club-card { min-width: 33.33%; }
+}
+
+/* NAVIGATION */
+.topnav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--blue3);
+}
+
+.menu {
+  display: flex;
+  gap: 15px;
+  margin-left: 30px;
+}
+
+.menu button {
+  background: none;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  color: #0b1220;
+  font-size: 0.95rem;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.menu button.active,
+.menu button:hover {
+  background: var(--blue2);
+  color: white;
+}
+
+/* SEARCH BAR */
+.search-wrap {
+  margin-left: auto;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+  padding: 6px 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search input {
+  border: none;
+  outline: none;
+  font-weight: 500;
+  width: 200px;
+}
+
+/* ABOUT SECTION */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 40px 10%;
+}
+
+.about-left, .about-right {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.about-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+.about-subtitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1E73BE;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.about-left p, .about-right p {
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: justify;
+  color: #222;
+}
+
+/* CLUBS GRID */
+.clubs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  justify-content: center;
+}
+
+.club {
+  width: 180px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.club .avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--blue1);
+  margin: 0 auto 10px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.club .avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.club .avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(44, 143, 224, 0.45);
+}
+
+/* SECTIONS */
+.section {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  padding: 60px 0 100px;
+  text-align: center;
+}
+
+.section.active {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* CLUB PAGE */
+.club-page-logo {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.section.active .club-page-logo {
+  opacity: 1;
+  box-shadow: 0 0 15px rgba(44, 143, 224, 0.35);
+}
+
+/* BUTTON */
+.back-btn {
+  margin-top: 40px;
+  background-color: var(--blue2);
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.back-btn:hover {
+  background-color: var(--blue3);
+  transform: scale(1.05);
+}
+
+/* GMAIL ICON */
+.gmail-tooltip {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.gmail-tooltip img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid var(--blue2);
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.gmail-tooltip:hover img {
+  transform: scale(1.1);
+}
+
+/* FAQ SECTION */
+.faq-page {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 80px;
+  flex-wrap: wrap;
+  text-align: left;
+  padding: 60px 10%;
+}
+
+.faq-section {
+  flex: 2;
+}
+
+.faq-section h1 {
+  color: var(--blue3);
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.faq-section .search {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+.faq {
+  width: 100%;
+  max-width: 700px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.question {
+  width: 100%;
+  text-align: left;
+  padding: 12px 0;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: #333;
+}
+
+.answer {
+  display: none;
+  padding: 0 0 10px;
+  font-size: 0.95rem;
+  color: #444;
+  text-align: left;
+}
+
+.answer.open {
+  display: block;
+}
+
+.contact {
+  flex: 1;
+  max-width: 250px;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.contact .hint {
+  color: var(--blue2);
+}
+
+.email {
+  margin-top: 5px;
+  color: #000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  #home { padding: 60px 60px 30px; }
+  .archive { font-size: 3.2rem; }
+  .faq-page { flex-direction: column; }
+}
+
+@media (max-width: 768px) {
+  #home { padding: 50px 30px 20px; }
+  .welcome { font-size: 1.4rem; }
+  .archive { font-size: 2.6rem; }
+  .subtitle { font-size: 1rem; }
+  .faq-section h1 { font-size: 1.5rem; }
+}
